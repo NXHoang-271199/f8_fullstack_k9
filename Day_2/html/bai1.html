@@ -25,41 +25,46 @@
     }
     form{
         .main_box{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: stretch;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: stretch;
         
-        .form_box{
-            margin-right: 50px;
-        }
-        .input_space{
-            width: 48%;
-            margin-top: 10px;
-        }
-        input{
-            border: 2px solid #ccc;
-            width: 250px;
-            height: 40px;
-            display: block;
-            padding-left: 5px;
+            .form_box{
+                margin-right: 50px;
+                .input_space{
+                    width: 48%;
+                    margin-top: 10px;
+                }
+                label{
+                    font-weight: bold;
+                }
+                input{
+                    border: 2px solid #ccc;
+                    width: 250px;
+                    height: 40px;
+                    display: block;
+                    padding-left: 5px;
+                }
+                .country{ 
+                    border: 2px solid #ccc;
+                    width: 250px;
+                    height: 40px;
+                }
+                button{
+                    margin-top: 30px;
+                    height: 40px;
+                    width:200px;
+                    color: #fff;
+                    background-color: hsl(190.38deg 89.26% 29.22%);
+                    border: none;
+                }
+                .note{
+                    opacity: 50%;
+                }
             }
-        .country{ 
-            border: 2px solid #ccc;
-            width: 250px;
-            height: 40px;
         }
-        button{
-            margin-top: 30px;
-            height: 40px;
-            width:200px;
-            color: #fff;
-            background-color: hsl(190.38deg 89.26% 29.22%);
-            border: none;
-            }
-        }
-    }
-    
+    }    
 </style>
 <body>
     <div class="wrapped">
@@ -72,33 +77,33 @@
                 <section class="form_box">
                     <div class="input_space">
                         <label for="">First name</label>
-                        <input type="text" value="" required>
+                        <input type="text" value="John" required>
                     </div>
                     <div class="input_space">
                         <label for="">Email address</label>
-                        <input type="email" required>
+                        <input type="email" value="john@example.com" required>
                     </div>
                     <div class="input_space">
                         <label for="">City</label>
-                        <input type="text" required>
+                        <input type="text" value="London" required>
                     </div>
                     <div class="input_space">
                         <label for="">ZIP code</label>
-                       <input type="text" required>
+                       <input type="text" value="EC2Y 8DS" required>
                     </div>
                     <button>SEND ME FREE COFFEE</button>
                 </section> 
                 <section class="form_box">       
                     <div class="input_space">
                         <label for="">Last name</label>
-                        <input type="text" value="" required>
+                        <input type="text" value="Smith" required>
                     </div>
                     <div class="input_space">
                         <label for="">Address</label>
-                        <input type="text" required>
+                        <input type="text" value="Silk St" required>
                 </div>
                     <div class="input_space">
-                        <label for="">State</label><span>(optional)</span>
+                        <label for="">State</label><span class="note">(optional)</span>
                         <input type="text" required>
                     </div>
                     <div class="input_space">
