@@ -1,0 +1,21 @@
+.list{
+    font-size: 12px;
+    a{
+        color: #000;
+        text-decoration: none;
+    }
+}
+.block-1{
+    background-color: blue;
+    height: 100px;
+    position: relative;
+    h2{
+        position: absolute;
+        color: yellow;
+        top: 15%;
+        left: 50px;
+    }
+}
+.paragraph{
+    font-size: 12px;
+}
