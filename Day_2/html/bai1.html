@@ -3,121 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 1</title>
+    <title>HTML Tag</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .wrapped{
-        width: 1000px;
-        margin: 0 auto;
-    }
-    .title{
-        margin-left: 173px;
-    }
-    p{
-        text-align: left;
-        margin: 10px 0;
-        padding-right: 360px;
-    }
-    form{
-        .main_box{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: stretch;
-        
-            .form_box{
-                margin-right: 50px;
-                .input_space{
-                    width: 48%;
-                    margin-top: 10px;
-                }
-                label{
-                    font-weight: bold;
-                }
-                input{
-                    border: 2px solid #ccc;
-                    width: 250px;
-                    height: 40px;
-                    display: block;
-                    padding-left: 5px;
-                }
-                .country{ 
-                    border: 2px solid #ccc;
-                    width: 250px;
-                    height: 40px;
-                }
-                button{
-                    margin-top: 30px;
-                    height: 40px;
-                    width:200px;
-                    color: #fff;
-                    background-color: hsl(190.38deg 89.26% 29.22%);
-                    border: none;
-                }
-                .note{
-                    opacity: 50%;
-                }
-            }
-        }
-    }    
-</style>
 <body>
-    <div class="wrapped">
-        <form action="">
-            <div class="main_box">
-                <div class="title">
-                    <h1>Try a free sample</h1>
-                    <p>Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe for a sample of the Colombia Carlos Imbachi coffee. We'll also make sure you don't miss out on news introducing the new coffees that we add to our store regularly.</p>
-                </div>
-                <section class="form_box">
-                    <div class="input_space">
-                        <label for="">First name</label>
-                        <input type="text" value="John" required>
-                    </div>
-                    <div class="input_space">
-                        <label for="">Email address</label>
-                        <input type="email" value="john@example.com" required>
-                    </div>
-                    <div class="input_space">
-                        <label for="">City</label>
-                        <input type="text" value="London" required>
-                    </div>
-                    <div class="input_space">
-                        <label for="">ZIP code</label>
-                       <input type="text" value="EC2Y 8DS" required>
-                    </div>
-                    <button>SEND ME FREE COFFEE</button>
-                </section> 
-                <section class="form_box">       
-                    <div class="input_space">
-                        <label for="">Last name</label>
-                        <input type="text" value="Smith" required>
-                    </div>
-                    <div class="input_space">
-                        <label for="">Address</label>
-                        <input type="text" value="Silk St" required>
-                </div>
-                    <div class="input_space">
-                        <label for="">State</label><span class="note">(optional)</span>
-                        <input type="text" required>
-                    </div>
-                    <div class="input_space">
-                        <label for="country">Country</label>
-                        <select name="" id="" class="country">
-                            <option value="" hidden>--choose</option>
-                            <option value="">United Kingdom</option>
-                        </select>
-                    </div>
-                    
-                </section>
-               
-            </div>
-        </form>
-    </div>
+    <article>
+        <blockquote style="margin-left: 0;">Posted by BGB,November,2012</blockquote>
+        <h2>Low and Slow</h2>
+        <p>This week I am <i>extremely</i> excited about technique called <i>sous vide</i>. In <i>sous vide</i> cooking, you submerde the food(usually vacuum-sealed in plastic) into a water bath that is a precisely set to the target temperature you want the food to be cooked to. In his book, <i>Cooking for Geeks</i>, Jeff Potter describes it as <q> ultra-low-temperature poaching </q>.</p>
+        <p>Next month, we will be serving Sous Vide Sal</p>
+        <p>Next month, we wil be serving <strong>Sous Vide Salmon with Dill Hollandaise</strong>. To reserve a seat at the chef table, contact us before November 30</p>
+        <p>blackgoose@example.com<br>
+        555-336</p>
+
+        <p><small>Warning: Sous vide cooked salmon is not pasteurized. Avoid it if you are pregnant or ha</small>VE IMMUNITY ISSUES</p>
+    </article>
 </body>
 </html>
