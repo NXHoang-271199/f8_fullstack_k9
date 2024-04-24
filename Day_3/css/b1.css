@@ -66,6 +66,10 @@ main{
             background-color:hsl(122.4deg 39.68% 49.41%) ;
             margin-top: 15px;
             margin-bottom: 20px;
+            cursor: pointer;
+            &:hover{
+                color: yellow;
+            }
         }
     }
 }
