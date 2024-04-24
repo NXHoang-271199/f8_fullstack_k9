@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login</title>
+    <style>
+        .box1{
+            /* display: flex;
+            flex-direction: column; */
+            .input-box{
+                display: flex;
+                align-items: center;
+                label{
+                    margin-top: 5px;
+                    width: 80px;
+                }
+                .info{
+                    height: 17px;
+                    margin-left: 30px;
+                    margin-top: 5px;
+                    border: 1px solid #000;
+                }
+                .choose{
+                    text-align: center;
+                }
+            }
+        }
+        .box2{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            .role-title{
+                width: 100px;
+            }
+            .role-box{
+                display: flex;
+                flex-direction: column;
+                input{
+                    margin-left: 14px;
+                }
+            }
+        }
+        .box3{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            .service-title{
+                width: 110px;
+            }
+            .service-box{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+        .touch{
+            margin-top: 15px;
+            margin-left: 110px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <div class="box1">
+            <div class="input-box">
+                <label for="user_name">Username:</label>
+                <input type="text" name="user" class="info" required id="user_name">
+            </div>
+            <div class="input-box">
+                <label for="pass_word">Password:</label>
+                <input type="password" name="pass" class="info" required id="pass_word">
+            </div>
+            <div class="input-box">
+                <label for="city">City of Employment:</label>
+                <input type="text" name="city" class="info" required id="city">
+            </div>
+            <div class="input-box">   
+                <label for="server">Web server:</label> 
+                <select name="server" id="server" class="info choose" required>
+                    <option value="" hidden>--Choose a server--</option>
+                    <option value="1">Apache Web Server</option>
+                </select>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="role-title">
+                <label>Please specify your role:</label>
+            </div>
+            <div class="role-box">
+                <label><input type="radio" name="role" required>Admin</label>
+                <label><input type="radio" name="role" required>Engineer</label>
+                <label><input type="radio" name="role" required>Manager</label>
+                <label><input type="radio" name="role" required>Guest</label>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="service-title">
+                <label>Single Sign-on to the following:</label>
+            </div>
+            <div class="service-box">
+                <label><input type="checkbox" name="service" >Mail</label>
+                <label><input type="checkbox" name="service" >Payroll</label>
+                <label><input type="checkbox" name="service" >Self-service</label>
+            </div>
+        </div>
+        <div class="touch">
+            <button type="submit">Login</button> 
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>
