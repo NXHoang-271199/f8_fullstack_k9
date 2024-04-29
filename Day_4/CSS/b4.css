@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.js-map-guide {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 50px;
+  h2 {
+    color: #4e586b;
+  }
+  .description1 {
+    margin-top: 20px;
+    line-height: 1.5;
+    span {
+      color: #1e88e5;
+      border-bottom: 1px solid #1e88e5;
+    }
+    mark {
+      padding: 2px 2px;
+      background-color: #e5e8f8;
+      border-radius: 5px;
+    }
+  }
+  .box {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    p {
+      color: #575a5f;
+    }
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #337fe8;
+      font-weight: bold;
+      text-decoration: none;
+      .click_learn {
+        border-bottom: 1px solid #337fe8;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            margin: 0 auto;
+        }
+        
+        blockquote::before{
+            content: "“";
+            background-color: #d4d4d4;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            font-size: 34px;
+            text-align: center;
+            line-height: 55px;
+        }
+        blockquote::after{
+            content: "„";
+            background-color: #d4d4d4;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            font-size: 34px;
+            text-align: right;
+            line-height: 15px;
+        }
+        blockquote{
+            padding: 40px 40px 20px 60px;
+            position: relative;
+            width: 60%;
+            text-align: left;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ab earum, accusantium consectetur architecto ea? Officiis error esse eos laborum impedit, harum ut fugiat placeat atque modi accusantium iusto quibusdam ipsum quam excepturi ad natus? Fugiat, dolorem sunt velit commodi ea magnam vitae rem harum unde dicta iste, officiis voluptatibus!
+        </blockquote>
+    </main>
+</body>
+</html>
