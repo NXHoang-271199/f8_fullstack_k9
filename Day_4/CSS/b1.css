@@ -59,6 +59,9 @@ footer {
         border: none;
         font-size: 10px;
         margin-left: 5px;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
