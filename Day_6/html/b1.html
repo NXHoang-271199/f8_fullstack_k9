@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="../Css/b1.css">
+    <title>Bài tập 1</title>
+</head>
+<body>
+    <div class="wrapped">
+        <div class="contact-form">
+            <h2>Hey there</h2>
+            <p class="desc"><span>We'd like to here from you.</span> Send us your messenger or just say hy with our contact form or directly via phone, we love to chat.</p>
+            <form action="">
+                <div class="input-box">
+                    <input type="text" placeholder="Your name" id="name" class="name" required>
+                    <div class="first-icon">
+                        <label for="name"><i class="fa-solid fa-user user-icon"></i></label>
+                    </div>
+
+                    <div class="last-icon">
+                        <label for="name"><i class="fa-solid fa-star star-icon"></i></label>
+                        <label for="name"><i class="fa-solid fa-xmark x"></i></label>
+                    </div>
+                    <div class="box-title">
+                        <div class="arrow"></div>
+                        <p class="small-title">Enter your name</p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="your@domain.com" id="email" class="email name">
+                    <div class="first-icon">
+                        <label for="email"><i class="fa-solid fa-user user-icon"></i></label>
+                    </div>
+
+                    <div class="last-icon">
+                        <label for="email"><i class="fa-solid fa-star star-icon"></i></label>
+                        <label for="email"><i class="fa-solid fa-xmark x"></i></label>
+                    </div>
+                    <div class="box-title">
+                        <div class="arrow"></div>
+                        <p class="small-title">Enter your email</p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="+ 44 00 123" id="phone-number" class="phone-number name">
+                    <div class="first-icon">
+                        <label for="phone-number"><i class="fa-solid fa-user user-icon"></i></label>
+                    </div>
+
+                    <div class="last-icon">
+                        <label for="phone-number"><i class="fa-solid fa-star star-icon"></i></label>
+                        <label for="phone-number"><i class="fa-solid fa-xmark x"></i></label>
+                    </div>
+                    <div class="box-title">
+                        <div class="arrow"></div>
+                        <p class="small-title">Enter phone number</p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <select class="subject name" name="subject" id="subject" required>
+                        <option value="">Subject</option>
+                        <option value="0">Math</option>
+                        <option value="1">Geography</option>
+                    </select>
+                    <div class="first-icon">
+                        <label for="subject"><i class="fa-solid fa-user user-icon"></i></label>
+                    </div>
+
+                    <div class="last-icon">
+                        <label for="subject"><i class="fa-solid fa-caret-up star-icon"></i></label>
+                        <i class="fa-solid fa-caret-down star-icon"></i>
+                        <label for="subject"><i class="fa-solid fa-xmark x"></i></label>
+                    </div>
+                    <div class="box-title">
+                        <div class="arrow"></div>
+                        <p class="small-title">Enter your name</p>
+                    </div>
+                </div>
+                <div class="text-box">
+                    <textarea class="message name" name="name" id="message" placeholder="Message"></textarea>
+                    <div class="first-icon">
+                        <label for="message"><i class="fa-solid fa-user user-icon"></i></label>
+                    </div>
+
+                    <div class="last-icon">
+                        <label for="message"><i class="fa-solid fa-star star-icon"></i></label>
+                        <label for="message"><i class="fa-solid fa-xmark x"></i></label>
+                    </div>
+                    <div class="box-title">
+                        <div class="arrow"></div>
+                        <p class="small-title">Enter your message</p>
+                    </div>
+                </div>
+                <div class="send-action">
+                    <input type="checkbox" class="check" id="check" name="check" hidden>
+                    <label for="check">Send me a copy of this message</label>
+                    <div class="btn-box">
+                        <button class="btn_send">SEND</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
