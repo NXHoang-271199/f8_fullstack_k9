@@ -292,6 +292,7 @@ body {
         border: none;
         background-color: #ea3f33;
         color: #fff;
+        cursor: pointer;
       }
     }
   }
