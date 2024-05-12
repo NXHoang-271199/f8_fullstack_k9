@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(font/OpenSans-Regular.ttf);
+  font-weight: 300;
+}
+body {
+  font-family: OpenSans;
+}
+nav {
+  width: 1000px;
+  margin-inline: auto;
+}
+ul {
+  width: 100%;
+  /* margin: 30px auto;
+  font-size: 0; */
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  list-style: none;
+  position: relative;
+}
+.menu-lv1 > li {
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+  /* font-size: 2em;
+  display: inline-block; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-box {
+  position: absolute;
+  right: 0;
+}
+.menu-lv1 > li > a {
+  /* width: 100%;
+  height: auto; */
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #666;
+  /* font-size: initial; */
+  &:hover {
+    background-color: #2da5da;
+    color: #fff;
+  }
+}
+ul li a:hover i {
+  color: #fff;
+}
+.icon-right {
+  /* position: absolute;
+  left: 0; */
+  margin-left: 10px;
+}
+.icon-left {
+  margin-right: 10px;
+}
+i {
+  display: block;
+  color: #666;
+}
+.news-menu {
+  position: relative;
+  & a:hover + .menu-lv2 {
+    opacity: 1;
+    transition: 2s;
+  }
+  & a:focus + .menu-lv2 {
+    opacity: 1;
+  }
+}
+.menu-lv2 {
+  position: relative;
+  display: block;
+  width: calc(100% + 120px);
+  height: auto;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  border: none;
+  box-shadow: 0 0 10px #666;
+  opacity: 0;
+  transition: 0.5s;
+  & li a:hover > .check {
+    border-color: #fff;
+  }
+}
+.menu-lv2 > li {
+  border: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  &:last-child > a {
+    border-bottom: none;
+  }
+  a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #666;
+    padding: 10px 5px;
+    /* border-bottom: 1px solid #ccc; */
+    &:hover {
+      background-color: #2da5da;
+      color: #fff;
+    }
+    .check {
+      margin-left: 0px;
+      display: inline-block;
+      margin-right: 20px;
+      margin-left: 10px;
+      width: 10px;
+      height: 18px;
+      transform: rotate(45deg);
+      border-width: 0 5px 5px 0;
+      border-color: transparent #666 #666 transparent;
+      border-style: solid;
+    }
+  }
+}
+.menu-lv2 > li {
+  border-left: none;
+  border-right: none;
+}
+.menu-lv2 > .triangle-up {
+  position: absolute;
+  top: -4px;
+  left: 20px;
+  width: 0px;
+  height: 0px;
+  border: 5px solid;
+  border-top-width: 0;
+  border-color: transparent transparent #fff transparent;
+}
