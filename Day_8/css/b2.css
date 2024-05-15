@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Asap;
+  src: url(font/Asap-Regular.ttf);
+  font-weight: 300;
+}
+.wrapped {
+  width: 1000px;
+  margin-inline: auto;
+}
+body {
+  font-family: Asap;
+  text-transform: uppercase;
+}
+.img-theme {
+  width: 100%;
+  height: 100%;
+}
+.profile {
+  height: 220px;
+  position: relative;
+}
+.wrap-logo .logo {
+  width: 140px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+span {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 10px;
+}
+.number {
+  font-size: 16px;
+}
+.content {
+  color: #fff;
+  position: absolute;
+  bottom: 15%;
+  left: 19%;
+}
+
+nav {
+  margin-right: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+nav ul li {
+  margin: 10px;
+}
+nav ul li a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  display: block;
+  color: #000;
+  font-weight: 700;
+}
+nav ul li:hover a {
+  border-bottom: 4px solid #dd5e56;
+  color: #dd5e56;
+}

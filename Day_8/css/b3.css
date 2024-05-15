@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapped {
+  width: 1000px;
+  margin-inline: auto;
+}
+@font-face {
+  font-family: Asap;
+  src: url(font/Asap-Regular.ttf);
+  font-weight: 300;
+}
+body {
+  font-family: Asap;
+}
+.position-box {
+  display: flex;
+  align-items: center;
+}
+.city {
+  color: #000;
+  background-color: #e5e5e5;
+  margin-right: 5px;
+  padding: 10px;
+  border-radius: 99px;
+  text-align: center;
+  h3 {
+    font-size: 14px;
+  }
+  .total_number {
+    font-size: 10px;
+  }
+}
+.district-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.district {
+  margin-top: 25px;
+  width: 30%;
+  border-radius: 3px;
+  margin-right: 25px;
+  position: relative;
+}
+img {
+  width: 100%;
+  border-radius: 3px;
+}
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
