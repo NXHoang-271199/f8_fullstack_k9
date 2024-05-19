@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+/* @font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins-Regular.ttf);
+  font-weight: 400;
+} */
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  /* line-height: 1.5; */
+}
+header .container {
+  width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+img {
+  width: 100%;
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+header {
+  margin-top: 40px;
+}
+.header .header-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-row nav ul {
+  display: flex;
+}
+.header .header-row .menu li {
+  margin: 16px;
+}
+nav ul li:first-of-type a {
+  color: #f55253;
+}
+.header .header-row .menu ul li > a {
+  /* display: block; */
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.header .header-row .search-bar .search-bar-form {
+  position: relative;
+}
+form .search-tool {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #212529;
+}
+.search-tool > .search {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+form .shopping-cart {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+/* form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+form .cart {
+  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+.shopping-cart::before {
+  position: absolute;
+  content: "";
+  background-color: #f2f2f2;
+  height: 27px;
+  width: 1.6px;
+  right: 40px;
+  top: -2px;
+}
+.header .header-row .search-bar input {
+  font-size: inherit;
+  width: 288px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 66px 12px 44px;
+}
+.header-contents {
+  margin-top: 80px;
+}
+.header-contents .left-contents {
+  width: 50%;
+}
+.header-contents .right-contents {
+  width: 50%;
+}
+.header-contents .right-contents img {
+  width: 100%;
+}
+.header-contents .left-contents .slogan-box {
+  display: flex;
+  align-items: center;
+  background: #fdecec;
+  border-radius: 23px;
+  padding: 12px 16px;
+  width: fit-content;
+}
+.left-contents .slogan-box h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #f55556;
+}
+.left-contents .slogan-box img {
+  margin-left: 10px;
+  display: block;
+  width: 26px;
+  height: 24px;
+}
+.left-main-content-box h1 {
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 88px;
+  letter-spacing: -0.01em;
+  color: #2e2e2e;
+}
+.left-main-content-box h1 span {
+  font-weight: 500;
+  font-size: 74px;
+  line-height: 88px;
+  letter-spacing: -0.05em;
+  color: #f54748;
+}
+.left-main-content-para {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.005em;
+  max-width: 80%;
+  margin: 22px 0;
+  color: #676767;
+}
+.order-btn-box {
+  margin: 50px 0 10px 0;
+}
+.order-btn-box .order-btn-row {
+  --margin-spacing: 1.5rem;
+  display: flex;
+  margin-right: calc(var(--margin-spacing) / -2);
+  margin-left: calc(var(--margin-spacing) / -2);
+}
+.order-btn-row .order-btn-left-box a {
+  background-color: #f86061;
+  color: #fffafa;
+  display: block;
+  width: 186px;
+  padding: 25px 20px;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 12px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.order-btn-right-box button .play-btn {
+  border-radius: 50%;
+  box-shadow: 0px 20px 49px -10px rgba(0, 0, 0, 0.08);
+}
+.order-btn-right-box button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 224px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: capitalize;
+  letter-spacing: -0.01em;
+  background: none;
+  border: none;
+  color: #2e2e2e;
+  margin-left: 25px;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+.order-btn-right-box .text-btn:hover {
+  opacity: 0.9;
+}
