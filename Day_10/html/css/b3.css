@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #6b7080;
+}
+h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #353e4f;
+  font-size: 36px;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.text-heading {
+  text-align: center;
+}
+p {
+  margin-top: 10px;
+}
+.input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.input-box {
+  position: relative;
+  width: 48.5%;
+  height: 60px;
+  border: none;
+  input {
+    padding: 30px 20px 10px 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    /* border: none; */
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    height: 100%;
+  }
+  label {
+    padding: 16px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #6b7080;
+    font-size: 16px;
+    transform: translateY(0);
+    transition: 1s ease;
+    transition-property: transform;
+  }
+}
+input:focus {
+  border: 1px solid violet;
+}
+input:focus + label {
+  transform: translateY(-5px);
+  font-size: 12px;
+}
+input:valid + label {
+  transform: translateY(-5px);
+  font-size: 12px;
+}
+
+.select-box {
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  width: 48.5%;
+  border-radius: 10px;
+}
+.department {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  color: #6b7080;
+  position: relative;
+  display: block;
+}
+.message-box {
+  width: 100%;
+  position: relative;
+  border: none;
+}
+.message {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 30px 0 0 20px;
+  outline: none;
+  /* appearance: none; */
+  &:focus {
+    border: 1px solid violet;
+  }
+}
+.message-label {
+  position: absolute;
+  padding: 16px 20px;
+  top: 0;
+  left: 0;
+  color: #6b7080;
+  font-size: 16px;
+  z-index: 99;
+  height: 100%;
+  transform: translateY(0);
+  transition: 1s ease;
+  transition-property: transform;
+}
+textarea:focus + label {
+  transform: translateY(-10px);
+  font-size: 12px;
+}
+/* textarea:valid + label {
+  transform: translateY(-5px);
+  font-size: 12px;
+} */
+.btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+button {
+  padding: 12px 20px;
+  border-radius: 99px;
+  border: none;
+  background-color: #4d76d8;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
