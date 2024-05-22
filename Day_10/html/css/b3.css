@@ -50,6 +50,7 @@ p {
     height: 100%;
   }
   label {
+    cursor: pointer;
     padding: 16px 20px;
     position: absolute;
     top: 0;
@@ -107,6 +108,7 @@ input:valid + label {
   }
 }
 .message-label {
+  cursor: pointer;
   position: absolute;
   padding: 16px 20px;
   top: 0;
