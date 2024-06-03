@@ -150,6 +150,12 @@ h2 {
   top: 0;
   right: 13%;
 }
+.landing-form .form-box {
+  top: 50%;
+}
+.landing-form .form-box {
+  margin-top: -313px;
+}
 .form-box-title {
   font-size: 1.625rem;
   text-align: center;
@@ -159,7 +165,7 @@ h2 {
 }
 /* FORM LOGIN */
 .form-box-login {
-  margin-top: 35px;
+  /* margin-top: 60px; */
   transform: translate(0px, 0px);
   opacity: 1;
   visibility: visible;
@@ -490,7 +496,18 @@ span {
     font-weight: 600;
   }
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 1600px) {
+  .form-box-login {
+    margin-top: 100px;
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    transition: all 0.6s ease-in-out 0s;
+    display: block;
+  }
 }
 @media screen and (min-width: 3840px) {
 }
@@ -527,7 +544,7 @@ span {
     z-index: 1;
     position: static;
     left: 0px;
-    transition: none 0s ease 0s;
+    transition: none 0s ease;
     display: block;
   }
   .form-box-register {
@@ -537,22 +554,21 @@ span {
     z-index: 1;
     position: static;
     left: 0px;
-    transition: none 0s ease 0s;
+    transition: none 0s ease;
     display: none;
   }
   .landing-form .form-box:first-child,
   .landing-form .form-box:last-child {
-    margin-top: 0;
-    top: 0;
+    margin: 0 auto;
   }
-  #register:checked ~ .col-xl-6 .landing-form .form-box-login {
+  #register:checked ~ .col-xxl-6 .landing-form .form-box-login {
     transform: translate(50%, 0px);
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
     z-index: 1;
     position: static;
     left: 0px;
-    transition: all 0.6s ease-in-out 0s;
+    /* transition: all 0s ease-in-out; */
     display: none;
   }
   #register:checked ~ .col-xl-12 .landing-form .form-box-register {
@@ -562,15 +578,15 @@ span {
     z-index: 2;
     position: static;
     left: 0px;
-    transition: all 0.6s ease-in-out 0s;
+    transition: all 0s ease-in-out;
     display: block;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 1200px) {
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 560px) {
 }
