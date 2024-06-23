@@ -1,4 +1,4 @@
-n = 8;
+var n = 8;
 var chessBoard = '';
     chessBoard += '<table border="1">'
 for (var row = 0; row <= n; row++) { 
