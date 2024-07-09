@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .article{
+            display: flex;
+            flex-direction: row-reverse;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 5px;
+        }
+        .article img{
+            margin-right: 20px;
+        }
+        .article:nth-child(2){
+            display: flex;
+            flex-direction: row;
+        }
+        .article:nth-child(2) img{
+            margin-right: 0px;
+        }
+    </style>
 </head>
 <body>
+    <article id="articles">
+        <!-- <img src="img/Demo.jpg" alt=""> -->
+    </article>
     <script src="js/b22-4.js"></script>
 </body>
 </html>
