@@ -54,4 +54,26 @@ var categories = [
       ],
     },
   ]
-  
+
+// Hàm tạo các thẻ option từ mảng categories
+function createOptions(categories, indent = "") {
+  let options = "";
+  categories.forEach((category) => {
+    options += `<option value="{$category.id}">${indent}${category.name}</option>`
+    if (category.children) {
+      options += createOptions(category.children, indent + "--|");
+    }
+  });
+  return options;
+}
+
+// Tạo các thẻ select và option
+const selectElement = `
+<select>
+<option>Chọn chuyên mục</option>
+${createOptions(categories)}
+</select>`;
+
+console.log(selectElement);
+
+document.querySelector('body').innerHTML = selectElement;
