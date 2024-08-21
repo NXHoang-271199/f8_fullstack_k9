@@ -12,8 +12,7 @@ function startCountDown() {
 
     var updateTimer = function (timestamp) {
         if (!startTime) { 
-            startTime = timestamp;
-            console.log(startTime);      
+            startTime = timestamp;    
         };
         var elapsedTime = Math.floor((timestamp - startTime) / 1000);
         console.log(elapsedTime);
@@ -23,12 +22,15 @@ function startCountDown() {
             countdownActive = false;
             getLinkBtn.disabled = false;
             getLinkBtn.style.background = "";
+            getLinkBtn.style.cursor = "pointer";
+            
             counterDisplay.textContent = 0;
         } else {
             countDown = countDownDuration - elapsedTime;
             counterDisplay.textContent = countDown;
-            getLinkBtn.style.background = "#ccc";
+            getLinkBtn.style.background = "#cdcdcd";
             getLinkBtn.style.cursor = "not-allowed";
+            getLinkBtn.style.color = "#333";
             frame(updateTimer);
         }
     }
@@ -47,13 +49,11 @@ getLinkBtn.addEventListener("click", function (e) {
 function handleVisibilityChange() {
     if (document.hidden) {
         countdownActive = false;
-        pauseTime += startTime
-        console.log(pauseTime);
-        // startTime = pauseTime;
-        counterDisplay.textContent = "pause";
+        pauseTime = startTime;
+        counterDisplay.textContent = "Paused";
     } else {
         countdownActive = true;
-        pauseTime = startTime
+        startTime = pauseTime;
         startCountDown();
     }
 }
