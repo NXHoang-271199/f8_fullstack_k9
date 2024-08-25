@@ -84,10 +84,10 @@ recognition.onresult = function (event) {
         "_blank"
       );
     } else {
-      actionEl.textContent = "Không thực hiện được yêu cầu.";
+      actionEl.textContent = "Đã nói xong. Hy vọng kết quả như ý bạn";
       resultEl.textContent = "Không thể xử lý yêu cầu.";
     }
-  }, 1000); // 1 giây chờ trước khi chuyển hướng
+  }, 1000);
 };
 
 // Khi có lỗi xảy ra
