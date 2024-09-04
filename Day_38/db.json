@@ -1,0 +1,64 @@
+{
+    "blogs":[
+        {
+            "id": 1,
+            "title":"Post 1",
+            "content": "Content post 1",
+            "author":"author 1"
+        },
+        {
+            "id": 2,
+            "title":"Post 2",
+            "content": "Content post 2",
+            "author":"author 2"
+        },
+        {
+            "id": 3,
+            "title":"Post 3",
+            "content": "Content post 3",
+            "author":"author 3"
+        },
+        {
+            "id": 4,
+            "title":"Post 4",
+            "content": "Content post 4",
+            "author":"author 4"
+        },
+        {
+            "id": 5,
+            "title":"Post 5",
+            "content": "Content post 5",
+            "author":"author 5"
+        },
+        {
+            "id": 6,
+            "title":"Post 6",
+            "content": "Content post 6",
+            "author":"author 6"
+        },
+        {
+            "id": 7,
+            "title":"Post 7",
+            "content": "Content post 7",
+            "author":"author 7"
+        },
+        {
+            "id": 8,
+            "title":"Post 8",
+            "content": "Content post 8",
+            "author":"author 8"
+        },
+        {
+            "id": 9,
+            "title":"Post 9",
+            "content": "Content post 9",
+            "author":"author 9"
+        },
+        {
+            "id": 10,
+            "title":"Post 10",
+            "content": "Content post 10",
+            "author":"author 10"
+        }
+    ]
+}
