@@ -1,58 +1,58 @@
 const url = `http://localhost:3000/blogs`;
 const root = document.querySelector('.root');
+const loading = document.querySelector('.loading');
 const limit = 5;
 let page = 1;
+let isLoading = false; // Trạng thái để tránh gọi API nhiều lần
 
-const getBlogs = async (page,limit) => {
+async function fetchPosts(page, limit) {
     try {
-        const response = await fetch(`${url}?_page=${page}&_limit=${limit}`);
+        const response = await fetch(`http://localhost:3000/blogs?_page=${page}&_limit=${limit}`);
         if (!response.ok) {
             throw new Error('Lỗi khi lấy dữ liệu');
         }
         const data = await response.json();
-        
-        // Kiểm tra xem có còn bài viết để tải hay không
-        if (data.length < limit) {
-            hasMorePosts = false;
-        }
-
         return data;
-    } catch (e) {
-        console.error('Error fetching data:', e);
+    } catch (error) {
+        console.error('Có lỗi xảy ra:', error);
         return [];
     }
-};
+}
 
-getBlogs();
-
-const renderBlogs = (blogs) => {
+function renderBlogs(blogs) {
     blogs.forEach((blog) => {
         const blogPost = document.createElement('div');
         blogPost.classList.add('blog-post');
         blogPost.innerHTML = `
             <h2>${blog.title}</h2>
             <p>${blog.content}</p>
-            <p><strong>Author</strong>${blog.author}</p>
+            <p><strong>Author: </strong>${blog.author}</p>
         `;
         root.appendChild(blogPost);
-    })
-};
-
-const loadBlogs = async () => {
-    const blogs = await getBlogs(page, limit);
-    renderBlogs(blogs);
+    });
 }
 
-const handleScroll = () => {
+async function loadBlogs() {
+    if (isLoading) return; // Nếu đang tải, không thực hiện thêm lần nữa
+    isLoading = true;
+    loading.style.display = 'block'; // Hiển thị loading
+
+    const blogs = await fetchPosts(page, limit);
+    renderBlogs(blogs);
+
+    loading.style.display = 'none'; // Ẩn loading
+    isLoading = false;
+}
+
+function handleScroll() {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - limit) {
-        console.log(scrollTop,clientHeight,scrollHeight);
-        
+    if (scrollTop + clientHeight >= scrollHeight - 5) { // Thay vì `limit` bạn nên dùng một giá trị nhỏ như `5`
         page++;
         loadBlogs();
-    } 
+    }
 }
 
-loadBlogs();
-
 window.addEventListener("scroll", handleScroll);
+
+// Gọi lần đầu để tải trang ban đầu
+loadBlogs();
