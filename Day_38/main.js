@@ -46,7 +46,7 @@ async function loadBlogs() {
 
 function handleScroll() {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 5) { // Thay vì `limit` bạn nên dùng một giá trị nhỏ như `5`
+    if (scrollTop + clientHeight >= scrollHeight - 5) { 
         page++;
         loadBlogs();
     }
