@@ -45,7 +45,7 @@ async function loadBlogs() {
         renderBlogs(blogs);
     }
 
-    loading.style.display = 'none'; // Ẩn loading
+    loading.style.display = 'none'; 
     isLoading = false;
 }
 
@@ -59,5 +59,5 @@ function handleScroll() {
 
 window.addEventListener("scroll", handleScroll);
 
-// Gọi lần đầu để tải trang ban đầu
+
 loadBlogs();
