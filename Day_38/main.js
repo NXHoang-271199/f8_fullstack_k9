@@ -1,9 +1,9 @@
-const url = `https://xqywg2-8080.csb.app/blogs`;
 const root = document.querySelector('.root');
 const loading = document.querySelector('.loading');
 const limit = 5;
 let page = 1;
 let isLoading = false; // Trạng thái để tránh gọi API nhiều lần
+let hasMoreBlogs = true; // Trạng thái kiểm tra còn dữ liệu không
 
 async function fetchPosts(page, limit) {
     try {
@@ -33,12 +33,17 @@ function renderBlogs(blogs) {
 }
 
 async function loadBlogs() {
-    if (isLoading) return; // Nếu đang tải, không thực hiện thêm lần nữa
+    if (isLoading || !hasMoreBlogs) return; // Nếu đang tải hoặc không còn dữ liệu, không gọi API nữa
     isLoading = true;
     loading.style.display = 'block'; // Hiển thị loading
 
     const blogs = await fetchPosts(page, limit);
-    renderBlogs(blogs);
+
+    if (blogs.length === 0) {
+        hasMoreBlogs = false; // Nếu không có bài viết nào trả về, đánh dấu hết dữ liệu
+    } else {
+        renderBlogs(blogs);
+    }
 
     loading.style.display = 'none'; // Ẩn loading
     isLoading = false;
@@ -46,7 +51,7 @@ async function loadBlogs() {
 
 function handleScroll() {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 5) { 
+    if (scrollTop + clientHeight >= scrollHeight - 5 && hasMoreBlogs) { 
         page++;
         loadBlogs();
     }
