@@ -1,4 +1,4 @@
-const url = `http://localhost:3000/blogs`;
+const url = `https://xqywg2-8080.csb.app/blogs`;
 const root = document.querySelector('.root');
 const loading = document.querySelector('.loading');
 const limit = 5;
@@ -7,7 +7,7 @@ let isLoading = false; // Trạng thái để tránh gọi API nhiều lần
 
 async function fetchPosts(page, limit) {
     try {
-        const response = await fetch(`http://localhost:3000/blogs?_page=${page}&_limit=${limit}`);
+        const response = await fetch(`https://xqywg2-8080.csb.app/blogs?_page=${page}&_limit=${limit}`);
         if (!response.ok) {
             throw new Error('Lỗi khi lấy dữ liệu');
         }
