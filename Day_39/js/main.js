@@ -1,5 +1,5 @@
 
-const url = `http://localhost:3000`;
+const url = `https://f325tp-8080.csb.app`;
 
 
 
@@ -49,13 +49,17 @@ btnAdd.addEventListener('click', () => {
     })
     const btnSave = document.querySelector('.btn-save');
     btnSave.addEventListener('click', (e) => {
-    e.preventDefault();
-    const inputTask = document.querySelector('#new-task');
+        e.preventDefault();
+        const inputTask = document.querySelector('#new-task');
     const data = {
         title: inputTask.value,
         completed: false,
     }
-    addTask(data);
+        if (inputTask.value === "") {
+            alert("Please enter a task")
+        } else {
+            addTask(data);
+        }
 });
 });
 
@@ -68,8 +72,9 @@ const addTask = async (data) => {
             },
             body: JSON.stringify(data),
         });
-        if (!response) {
-            throw new Error("Fetch to failed")
+        if (response.ok) {
+            console.log('Task added successfully');
+            
         }
     } catch (error) {
         console.log(error);
@@ -236,27 +241,27 @@ const btnShowCompletedTask = document.querySelector('#completed-task')
 // Biến trạng thái để theo dõi trạng thái của nút
 let isCompletedVisible = false;
 
-btnShowCompletedTask.addEventListener('click', () => {
-    const display = document.querySelector('.completed-place');
+// btnShowCompletedTask.addEventListener('click', () => {
+//     const display = document.querySelector('.completed-place');
     
-    if (isCompletedVisible) {
+//     if (isCompletedVisible) {
 
-        display.innerHTML = `
-            <button id="completed-task" class="bg-emerald-700 hover:bg-emerald-800 focus:ring-emerald-300 mt-2.5 flex items-center gap-2 rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-4">
-                <span class="font-medium text-white">Completed Todos <span>1</span></span>
-                <i class="fa-regular fa-circle-down text-white rotate-0 h-4 w-4 transition-all"></i>
-            </button>
-        `;
-        isCompletedVisible = false;
-    } else {
-        isCompletedVisible = true;
-        display.innerHTML = `
+//         display.innerHTML = `
+//             <button id="completed-task" class="bg-emerald-700 hover:bg-emerald-800 focus:ring-emerald-300 mt-2.5 flex items-center gap-2 rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-4">
+//                 <span class="font-medium text-white">Completed Todos <span>1</span></span>
+//                 <i class="fa-regular fa-circle-down text-white rotate-0 h-4 w-4 transition-all"></i>
+//             </button>
+//         `;
+//         isCompletedVisible = false;
+//     } else {
+//         isCompletedVisible = true;
+//         display.innerHTML = `
         
-            <button id="completed-task" class="bg-gray-400 hover:bg-gray-500 focus:ring-gray-100 mt-2.5 flex items-center gap-2 rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-4">
-                <span class="font-medium text-white">Completed Todos  <span>1</span></span>
-                <i class="fa-regular fa-circle-down text-white -rotate-90 h-4 w-4 transition-all"></i>
-            </button>
-        `
+//             <button id="completed-task" class="bg-gray-400 hover:bg-gray-500 focus:ring-gray-100 mt-2.5 flex items-center gap-2 rounded-lg px-4 py-2.5 transition-all focus:outline-none focus:ring-4">
+//                 <span class="font-medium text-white">Completed Todos  <span>1</span></span>
+//                 <i class="fa-regular fa-circle-down text-white -rotate-90 h-4 w-4 transition-all"></i>
+//             </button>
+//         `
         
-    }
-});
+//     }
+// });
