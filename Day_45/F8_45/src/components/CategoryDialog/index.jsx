@@ -16,7 +16,7 @@ export default function ({ show, onClose, width, reload }) {
     }
 
     const onSave = async () => {
-        const response = await fetch('http://localhost:3000/categories', {
+        const response = await fetch('https://qzztw5-8080.csb.app/categories', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

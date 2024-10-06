@@ -25,7 +25,7 @@ export default function () {
     ]
     
     const getCategories = async () => { 
-        const response = await fetch(`http://localhost:3000/categories`)
+        const response = await fetch(`https://qzztw5-8080.csb.app/categories`)
         setCategories(await response.json())
     }
 
