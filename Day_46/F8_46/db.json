@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Category 5",
+      "orderNum": "5"
+    },
+    {
+      "id": "1a62f9e2-8f71-41fb-91b9-024893c65e27",
+      "name": "Category 6",
+      "orderNum": "6"
+    },
+    {
+      "id": "56e2",
+      "name": "Category 1",
+      "orderNum": "1"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 2",
+      "price": "2000",
+      "categoryId": 1,
+      "orderNum": "2"
+    },
+    {
+      "id": "7fa4",
+      "name": "Product 3",
+      "price": "3000",
+      "categoryId": "",
+      "orderNum": "3"
+    },
+    {
+      "id": "89dc",
+      "name": "Pro 5",
+      "price": "5000",
+      "categoryId": "1",
+      "orderNum": "6"
+    }
+  ]
+}
