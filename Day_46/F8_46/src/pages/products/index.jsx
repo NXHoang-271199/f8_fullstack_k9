@@ -34,7 +34,7 @@ export default function () {
     ]
 
     const getProducts = async () => {
-        const response = await fetch(`http://localhost:3000/products`)
+        const response = await fetch(`https://px7ltm-8080.csb.app/products`)
         setProducts(await response.json())
     }
 
