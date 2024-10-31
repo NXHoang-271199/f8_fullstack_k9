@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   console.log('1');
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: '0 auto',  width: '1200px' }}>
       <header className="flex justify-center ">
         <h1 className="text-3xl">Local Shop</h1>
       </header>
